@@ -1,0 +1,134 @@
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  height: 3.5px;
+  width: 30px;
+  left: 0;
+  bottom: 0;
+}
+
+
+.container form .user__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+/* inside the form user details */
+form .user__details .input__box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.user__details .input__box input {
+  height: 45px;
+  width: 70%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+  color:black;
+}
+
+/* inside the form gender details */
+
+form .gender__details .gender__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form{
+    margin-top: 60px;
+    padding: 1px;
+}
+
+form .gender__details .category {
+  display: flex;
+  width: 80%;
+  margin: 15px 0;
+  justify-content: space-between;
+}
+
+.gender__details .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender__details .category .dot {
+    
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two,
+#dot-3:checked ~ .category .three {
+  color:rgb(6, 26, 116);
+}
+
+form input[type="radio"] {
+  display: none;
+  color: #131313;
+}
+
+/* submit button */
+form .button {
+  height: 45px;
+  margin: 45px 0;
+  text-align:center;
+}
+
+form .button input {
+  height: 100%;
+  width: 10%;
+  text-align: center;
+  outline: none;
+  color: #131313;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: skyblue;
+
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, var(--main-blue), var(--main-purple));
+  background-color: aquamarine;
+}
+
+@media only screen and (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+
+  form .user__details .input__box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  
+
+  
+ 
+}
